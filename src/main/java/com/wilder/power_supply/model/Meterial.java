@@ -13,34 +13,34 @@ import lombok.Setter;
  */
 public class Meterial extends BaseRowModel{
     @Getter @Setter
-    @ExcelProperty(value = "序号")
+    @ExcelProperty(value = "序号",index = 0)
     private int meterialId;
 
-    @ExcelProperty(value = "物资编码")
+    @ExcelProperty(value = "物资编码",index = 1)
     @Getter @Setter
     private String meterialCode;
 
-    @ExcelProperty(value = "物资名称")
+    @ExcelProperty(value = "物资名称",index = 2)
     @Getter @Setter
     private String meterialName;
 
-    @ExcelProperty(value = "规格型号")
+    @ExcelProperty(value = "规格型号",index = 3)
     @Getter @Setter
     private String meterialModel;
 
-    @ExcelProperty(value = "单位")
+    @ExcelProperty(value = "单位",index = 4)
     @Getter @Setter
     private String meterialUnit;
 
-    @ExcelProperty(value = "单价（隐藏列）")
+    @ExcelProperty(value = "单价（隐藏列）",index = 5)
     @Getter @Setter
     private String meterialPrice;
 
-    @ExcelProperty(value = "是否业扩储备物资")
+    @ExcelProperty(value = "是否业扩储备物资",index = 6)
     @Getter @Setter
     private String meterialCheck;
 
-    @ExcelProperty(value = "备注1（隐藏列）")
+    @ExcelProperty(value = "备注1（隐藏列）",index = 7)
     @Getter @Setter
     private String meterialAttention;
 
