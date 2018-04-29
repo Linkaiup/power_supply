@@ -7,8 +7,8 @@ package com.wilder.power_supply.exception;
  * Remember to sow in the spring.
  * Description : power_supply
  */
-public class MyException extends Exception {
-    public MyException(String message){
+public class PowerException extends Exception {
+    public PowerException(String message){
         super(message);
     }
 }

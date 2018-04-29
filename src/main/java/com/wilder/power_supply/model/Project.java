@@ -4,6 +4,7 @@ import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.metadata.BaseRowModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
+import lombok.NoArgsConstructor;
 
 /**
  * Created by K Lin
@@ -13,6 +14,7 @@ import lombok.Data;
  * Description : power_supply
  */
 @AllArgsConstructor
+@NoArgsConstructor
 @Data
 public class Project extends BaseRowModel {
     @ExcelProperty(value = "序号",index = 0)

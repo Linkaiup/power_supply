@@ -19,18 +19,18 @@ import javax.servlet.http.HttpServletRequest;
 @ControllerAdvice
 public class PowerExceptionHandler {
 
-    @ExceptionHandler(value = Exception.class)
-    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
-        ModelAndView mav = new ModelAndView();
-        mav.addObject("exception", e);
-        mav.addObject("url", req.getRequestURL());
-        mav.setViewName("error");
-        return mav;
-    }
+//    @ExceptionHandler(value = Exception.class)
+//    public ModelAndView defaultErrorHandler(HttpServletRequest req, Exception e) throws Exception {
+//        ModelAndView mav = new ModelAndView();
+//        mav.addObject("exception", e);
+//        mav.addObject("url", req.getRequestURL());
+//        mav.setViewName("error");
+//        return mav;
+//    }
 
-    @ExceptionHandler(value = MyException.class)
+    @ExceptionHandler(value = PowerException.class)
     @ResponseBody
-    public ResultInfo<String> jsonErrorHandler(HttpServletRequest req, MyException e) throws Exception {
+    public ResultInfo<String> jsonErrorHandler(HttpServletRequest req, PowerException e) throws Exception {
         ResultInfo<String> r = new ResultInfo<>(ResultInfo.ERROR,e.getMessage());
         return r;
     }
